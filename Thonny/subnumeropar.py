@@ -1,18 +1,22 @@
-T = int(input())
+x = int(input())
+a = 0
+i = 0
+b = 0
+c = 0
+menor_num = 0
 
-for i in range (T):
-    PA, PB, G1, G2 = input().split()
-    PA = int(PA)
-    PB = int(PB)
-    G1 = float(G1)
-    G2 = float(G2)
-
-    ano = 0 
-    while PA <= PB:
-        PA = PA + PA * (G1 / 100)
-        PB = PB + PB * (G2 / 100)
-        ano += 1
-if ano > 100:
-    print("Mais de 1 século.")
-else: 
-    print(f"{ano} anos.")
+while i < x:
+    num = int(input())
+    if num >= a:
+        maior_num = num
+    else:
+        c = num
+    if num < c:
+        menor_num = num
+    elif num <= b:
+        menor_num = num
+    a = maior_num 
+    b = menor_num
+    i += 1
+print(f"{maior_num} e {menor_num}")
+    
